@@ -1,10 +1,13 @@
 app.config(function($routeProvider){
     $routeProvider
     .when('/', {
-        templateURL: '../views/login.html'
+        templateUrl: 'views/login.html'
     })
     .when('/login', {
-        templateURL: '../views/login.html'
+        templateUrl: 'views/login.html'
+    })
+    .when('/list', {
+        templateUrl: 'views/list.html'
     })
     //More Here
 });
