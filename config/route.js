@@ -9,5 +9,8 @@ app.config(function($routeProvider){
     .when('/list', {
         templateUrl: 'views/list.html'
     })
+    .when('/teste', {
+        templateUrl: 'views/login.html'
+    })
     //More Here
 });

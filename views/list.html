@@ -4,42 +4,39 @@
             <span class="mdl-layout-title">Cuca Manager</span>
         </div>
     <!-- Tabs -->
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Todas</a>
-            <a href="#scroll-tab-2" class="mdl-layout__tab">Minhas Cucas</a>
-        </div>
+
+        <nav class="mdl-navigation" style="margin-left: 50px">
+            <a href="#/list" class="mdl-layout__tab is-active">Todas</a>
+            <a href="#/teste" class="mdl-layout__tab">Minhas Cucas</a>
+            <a href="#/teste" class="mdl-layout__tab">Sair</a>
+        </nav>
     </header>
     <button id="add" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">
         <i class="material-icons">add</i>
     </button>
-
-    <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-            <div class="page-content">
-                <br><br>
-                <div class="mdl-grid">
-                    <div class="card mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
-                        <figure class="mdl-card__media">
-
-                            <img src="resources\cakes.png" width="400px"height="280px" alt="" />
-                        </figure>
-                        <div class="mdl-card__title">
-                            <h1 class="mdl-card__title-text">Cuca da Virada</h1>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <p>Esta cuca vai ser emocional e encantadora! Participem!.</p>
-                            <p>29 mar 2016 15:00 - R$ 10,00</p>
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Participar</a>
-                        </div>
-
+    <div class="page-content">
+        <br><br>
+        <div class="mdl-grid">
+            <!-- card -->
+            <div class="mdl-cell mdl-cell--4-col "> <!-- ng-repeat -->
+                <div class="card mdl-card mdl-shadow--2dp">
+                    <figure class="mdl-card__media">
+                        <img src="resources\cakes.png" width="400px"height="280px" alt="" />
+                    </figure>
+                    <div class="mdl-card__title">
+                        <h1 class="mdl-card__title-text">Cuca da Virada</h1>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Esta cuca vai ser emocional e encantadora! Participem!.</p>
+                        <p>29 mar 2016 15:00 - R$ 10,00</p>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Participar</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-            <div class="page-content"></div>
-        </section>
-    </main>
+            <!-- fim card -->
+            <!-- More Cards Here -->
+        </div>
+    </div>
 </div>
