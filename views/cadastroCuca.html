@@ -1,0 +1,68 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Cuca Manager</span>
+        </div>
+        <nav class="mdl-navigation" style="margin-left: 50px">
+            <a href="#/list" class="mdl-layout__tab">Todas</a>
+            <a href="#/teste" class="mdl-layout__tab">Minhas Cucas</a>
+            <a href="#/teste" class="mdl-layout__tab">Sair</a>
+        </nav>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Cuca Manager</span>
+        <nav class="mdl-navigation">
+            <a href="#/list" class="mdl-navigation__link">Todas</a>
+            <a href="#/teste" class="mdl-navigation__link">Minhas Cucas</a>
+            <a href="#/teste" class="mdl-navigation__link">Sair</a>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <main>
+        <br><br>
+        <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-cell mdl-cell--5-col mdl-card mdl-shadow--2dp">
+
+                <form ng-submit="submit(cuca)">
+                    <figure class="mdl-card__media">
+                        <img src="resources\cakeCadastro.jpg" width="800px" alt="" />
+                    </figure>
+                    <div class="mdl-card__title">
+                        <h1 class="mdl-card__title-text">Marque sua cuca...</h1>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="md-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="txt1" type="text" class="mdl-textfield__input" ng-model="cuca.nome">
+                                <label class="mdl-textfield__label" for="txt1">Título</label>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <label  class="mdl-textfield__label">Descrição</label>
+                                <textarea class="mdl-textfield__input" ng-model="cuca.descricao"></textarea>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="txt2" type="text" class="mdl-textfield__input" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" ng-model="cuca.data">
+                                <label class="mdl-textfield__label" for="txt2">Data</label>
+                                <span class="mdl-textfield__error">Data inválida. dd/mm/yyyy</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="txt3" type="text" class="mdl-textfield__input" pattern="-?[0-9]*(\.[0-9]+)?" ng-model="cuca.preco">
+                                <label class="mdl-textfield__label" for="txt3">Preço</label>
+                                <span class="mdl-textfield__error">Não é um número válido.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="margin-left: 14px">Marcar!</button>
+                        <a href="#/list" type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="margin-left: 14px">Cancelar :(</a>
+                    </div>
+                </form>
+
+            </div>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </main>
+    <!-- /Content -->
+</div>
