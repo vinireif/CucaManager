@@ -1,5 +1,5 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
+    <header class="mdl-layout__header no-select">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">Cuca Manager</span>
         </div>
@@ -9,7 +9,7 @@
             <a href="#/login" class="mdl-layout__tab">Sair</a>
         </nav>
     </header>
-    <div class="mdl-layout__drawer">
+    <div class="mdl-layout__drawer no-select">
         <span class="mdl-layout-title">Cuca Manager</span>
         <nav class="mdl-navigation">
             <a href="#/list" class="mdl-navigation__link">Todas</a>
@@ -18,7 +18,7 @@
             <a href="#/login" class="mdl-navigation__link">Sair</a>
         </nav>
     </div>
-    <a href="#/cadastroCuca" id="add" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">
+    <a href="#/cadastroCuca" id="add" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent mdl-layout--large-screen-only">
         <i class="material-icons">add</i>
     </a>
 
@@ -27,9 +27,9 @@
         <br><br>
         <div class="mdl-grid">
             <!-- card -->
-            <div class="mdl-cell mdl-cell--4-col "> <!-- ng-repeat -->
+            <div class="mdl-cell mdl-cell--4-col"> <!-- ng-repeat -->
                 <div class="card mdl-card mdl-shadow--2dp">
-                    <figure class="mdl-card__media">
+                    <figure class="mdl-card__media no-select">
                         <img src="resources\cakes.png" width="400px"height="280px" alt="" />
                     </figure>
                     <div class="mdl-card__title">
@@ -40,7 +40,7 @@
                         <p>29 mar 2016 15:00 - R$ 10,00</p>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Participar</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect no-select">Participar</a>
                     </div>
                 </div>
             </div>
