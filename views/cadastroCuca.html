@@ -25,15 +25,14 @@
         <div class="mdl-grid">
             <div class="mdl-layout-spacer"></div>
             <div class="mdl-cell mdl-cell--5-col mdl-card mdl-shadow--2dp">
-
-                <form ng-submit="submit(cuca)">
+                <!-- form -->
                     <figure class="mdl-card__media">
                         <img src="resources\cakeCadastro.jpg" width="800px" alt="" />
                     </figure>
                     <div class="mdl-card__title">
                         <h1 class="mdl-card__title-text">Marque sua cuca...</h1>
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdl-card__supporting-text width100">
                         <div class="md-grid">
                             <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input id="txt1" type="text" class="mdl-textfield__input" ng-model="cuca.nome">
@@ -56,11 +55,10 @@
                         </div>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="margin-left: 14px">Marcar!</button>
-                        <a href="#/list" type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="margin-left: 14px">Cancelar</a>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="submit">Marcar!</button>
+                        <a href="#/list" type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</a>
                     </div>
-                </form>
-
+                <!-- /form -->
             </div>
             <div class="mdl-layout-spacer"></div>
         </div>

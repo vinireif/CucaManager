@@ -8,3 +8,7 @@ a {
     top: 80px;
     z-index: 999;
 }
+
+.width100 {
+    width: 100%!important;
+}
