@@ -24,3 +24,13 @@ create table cuca (
   preco float(4,2),
   ativo char(1)
 );
+
+/*
+ * Participante
+ */
+create table participante (
+    id int(8) primary key auto_increment,
+    id_usuario int(8),
+    id_cuca int(8),
+    pago char(1)
+);
