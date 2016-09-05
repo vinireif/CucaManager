@@ -1,0 +1,107 @@
+<div ng-controller="novaCucaCtrl">
+	<script>
+		$(document).ready(function(){
+			$(".button-collapse").sideNav({closeOnClick: true});
+			$('.collapsible').collapsible();
+		});
+	</script>
+
+	<!-- header -->
+	<header class="no-select">
+	<nav>
+		<a href="" data-activates="slide-out" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
+		<ul id="slide-out" class="side-nav">
+			<li><a href="#/todos">Todos</a></li>
+			<li><a href="#/minhas">Minhas Cucas</a></li>
+			<li><a href="#/novaCuca">Nova Cuca</a></li>
+			<li><a href="#/login">Sair</a></li>
+		</ul>
+		<div class="brown darken-1">
+			<div class="container">
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo">Cake's</a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#/todos">Todas</a></li>
+						<li><a href="#/minhas">Minhas Cucas</a></li>
+						<li><a href="#/login">Sair</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="center-align">
+		<a href="#/novaCuca" id="add" class="btn-floating btn-large waves-effect waves-light red lighten-1 hide-on-med-and-down"><i class="material-icons">add</i></a>
+	</div>
+	</header>
+
+	<!-- Main-->
+	<main>
+	<div class="container">
+		<div class="row">
+			<!-- Cards -->
+			<div class="col s12 m12 l12">
+				<div class="card">
+					<div class="card-image no-select">
+						<img src="resources/cakeCadastro.jpg" height="200px">
+						<span class="card-title">Nova Cuca</span>
+					</div>
+					<form>
+						<div class="card-content">
+
+		                    <!-- Nome -->
+		                    <div class="input-field">
+		                        <input type="text" class="validate" required>
+		                        <label>Nome</label>
+		                    </div>
+
+		                    <!-- Desc -->
+		                    <div class="input-field">
+		                        <textarea type="text" class="materialize-textarea validate" required></textarea>
+		                        <label>Descrição</label>
+		                    </div>
+
+		                    <!-- Data -->
+		                    <div class="input-field">
+		                        <input type="date" class="datepicker" required>
+		                        <label>Data</label>
+		                    </div>
+
+		                    <!-- Preço -->
+		                    <div class="input-field">
+		                        <input type="number" class="validate" min="0" step="0.01">
+		                        <label>Preço</label>
+		                    </div>
+
+						</div>
+						<div class="card-action no-select">
+							<a href="" ng-click="submit()" >Concluir</a>
+		                    <a href="#/todos">Cancelar</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- /Cards -->
+		</div>
+	</div>
+	</main>
+
+	<!-- footer -->
+	<footer class="page-footer  brown darken-1">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6 l6">
+					<h4 class="white-text">Cakes</h4>
+					<p class="white-text">Aproveite para divulgar suas cucas na sua empresa, casa, sítio, etc. Não esqueça de marcar sua cuca no dia de seu aniversário, colabore!</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2016 Copyright - Vinícius Reif Biavatti
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/datapicker.js"></script>
+</div>

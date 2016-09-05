@@ -1,16 +1,19 @@
 app.config(function($routeProvider){
     $routeProvider
     .when('/', {
-        templateUrl: 'views/login.html'
+        templateUrl: 'views/todos.html'
     })
     .when('/login', {
         templateUrl: 'views/login.html'
     })
-    .when('/list', {
-        templateUrl: 'views/list.html'
+    .when('/todos', {
+        templateUrl: 'views/todos.html'
     })
-    .when('/cadastroCuca', {
-        templateUrl: 'views/cadastroCuca.html'
+    .when('/novaCuca', {
+        templateUrl: 'views/novaCuca.html'
+    })
+    .when('/minhas', {
+        templateUrl: 'views/minhas.html'
     })
     //More Here
 });
