@@ -21,7 +21,7 @@ create table cuca (
   titulo varchar(50),
   descricao varchar(50),
   data date,
-  preco float(4,2),
+  preco float(6,2),
   ativo char(1)
 );
 

@@ -1,4 +1,4 @@
-<div ng-controller="">
+<div ng-controller="minhaCucaCtrl">
 	<script>
 		$(document).ready(function(){
 			$(".button-collapse").sideNav({closeOnClick: true});
@@ -40,22 +40,23 @@
 	<div class="container">
 		<div class="row">
 			<!-- Cards -->
-			<div class="col s12 m6 l4">
+			<div class="col s12 m6 l4" ng-repeat="cuca in cucas">
 				<div class="card">
 					<div class="card-image no-select">
 						<img src="resources/cakes0.png" height="250px">
-						<span class="card-title white-text">Cuca da Sexta-Feira</span>
+						<span class="card-title white-text">{{cuca.titulo}}</span>
 					</div>
 					<div class="card-content">
-						<p>Preparados? Cuca na próxima sexta feira! Esperamos por vocês.</p>
+						<p>{{cuca.descricao}}</p>
 						<br>
-						<p>Data: 10/08/2017</p>
-						<p>Valor: R$ 10.00</p>
+						<p>Data: {{cuca.data}}</p>
+						<p>Preço: {{cuca.preco}}</p>
 					</div>
 					<div class="card-action no-select">
-						<a href="#">PARTICIPAR</a>
+						<a href="#">EDITAR</a>
 					</div>
 				</div>
+				<br><br>
 			</div>
 			<!-- /Cards -->
 		</div>

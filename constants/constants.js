@@ -1,2 +1,2 @@
 //General Constants
-const WS_URL = "../../CucaManagerWS/";
+const WS_URL = "ws/";
