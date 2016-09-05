@@ -1,24 +1,6 @@
-a {
-    text-decoration: none!important;
-}
-
 #add {
     position: absolute;
-    right: 200px;
-    top: 80px;
+    top: 35px;
     z-index: 999;
-}
-
-.width100 {
-    width: 100%!important;
-}
-
-.no-select {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+    transform: translate(-50%, 0%);
 }

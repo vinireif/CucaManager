@@ -1,52 +1,58 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header no-select">
-        <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Cuca Manager</span>
-        </div>
-        <nav class="mdl-navigation" style="margin-left: 50px">
-            <a href="#/list" class="mdl-layout__tab is-active">Todas</a>
-            <a href="#/teste" class="mdl-layout__tab">Minhas Cucas</a>
-            <a href="#/login" class="mdl-layout__tab">Sair</a>
-        </nav>
-    </header>
-    <div class="mdl-layout__drawer no-select">
-        <span class="mdl-layout-title">Cuca Manager</span>
-        <nav class="mdl-navigation">
-            <a href="#/list" class="mdl-navigation__link">Todas</a>
-            <a href="#/minhasCucas" class="mdl-navigation__link">Minhas Cucas</a>
-            <a href="#/cadastroCuca" class="mdl-navigation__link">Add</a>
-            <a href="#/login" class="mdl-navigation__link">Sair</a>
-        </nav>
-    </div>
-    <a href="#/cadastroCuca" id="add" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent mdl-layout--large-screen-only">
-        <i class="material-icons">add</i>
-    </a>
+<!-- header -->
+<header>
+<nav>
+	<ul id="slide-out" class="side-nav">
+		<li><a href="#!">Home</a></li>
+		<li><a href="#!">More</a></li>
+		<li><a href="#!">Here</a></li>
+		<li><a href="#!">Add</a></li>
+	</ul>
+	<div class="brown darken-1">
+		<div class="container">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Cake's</a>
+				<ul class="right hide-on-med-and-down">
+					<li class="active"><a href="#">Todas</a></li>
+					<li><a href="#">Minhas Cucas</a></li>
+					<li><a href="#">Sair</a></li>
+				</ul>
 
-    <!-- Content -->
-    <main>
-        <br><br>
-        <div class="mdl-grid">
-            <!-- card -->
-            <div class="mdl-cell mdl-cell--4-col"> <!-- ng-repeat -->
-                <div class="card mdl-card mdl-shadow--2dp">
-                    <figure class="mdl-card__media no-select">
-                        <img src="resources\cakes.png" width="400px"height="280px" alt="" />
-                    </figure>
-                    <div class="mdl-card__title">
-                        <h1 class="mdl-card__title-text">Cuca da Virada</h1>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Esta cuca vai ser emocional e encantadora! Participem!.</p>
-                        <p>29 mar 2016 15:00 - R$ 10,00</p>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect no-select">Participar</a>
-                    </div>
-                </div>
-            </div>
-            <!-- fim card -->
-        </div>
-    </main>
-    <!-- /Content -->
-
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="center-align">
+	<a href="#" id="add" class="btn-floating btn-large waves-effect waves-light red lighten-1 hide-on-med-and-down"><i class="material-icons">add</i></a>
 </div>
+</header>
+
+<!-- Main-->
+<main>
+<div class="container">
+	<div class="row">
+		<!-- Cards -->
+		<div class="col s12 m6 l4">
+			<div class="card">
+				<div class="card-image">
+					<img src="http://demo.geekslabs.com/materialize/v2.2/layout03/images/user-profile-bg.jpg" height="250px">
+					<span class="card-title">Cuca da Sexta-Feira</span>
+				</div>
+				<div class="card-content">
+					<p>Preparados? Cuca na próxima sexta feira! Esperamos por vocês.</p>
+					<br>
+					<p>Data: 10/08/2017</p>
+					<p>Valor: R$ 10.00</p>
+				</div>
+				<div class="card-action">
+					<a href="#">PARTICIPAR</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Cards -->
+	</div>
+</div>
+</main>
+
+<!-- footer -->
+<footer>
+</footer>
