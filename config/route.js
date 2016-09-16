@@ -15,5 +15,14 @@ app.config(function($routeProvider){
     .when('/minhas', {
         templateUrl: 'views/minhas.html'
     })
+    .when('/esqueceuSenha', {
+        templateUrl: 'views/esqueceuSenha.html'
+    })
+    .when('/cadastro', {
+        templateUrl: 'views/cadastro.html'
+    })
+    .when('/alterarSenha', {
+        templateUrl: 'views/alterarSenha.html'
+    })
     //More Here
 });

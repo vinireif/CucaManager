@@ -6,8 +6,10 @@ use cucamanager;
  */
 create table usuario (
   id int(8) primary key auto_increment,
+  nome varchar(50),
   email varchar(50),
   senha varchar(50),
+  token varchar(32),
   ativo char(1)
 );
 insert into usuario values (0,'admin','adminadmin',"S");

@@ -1,35 +1,27 @@
 app.controller('novaCucaCtrl', function($scope, $http, CucaService, UsuarioService, toastr, $location) {
 
+    //Selecionar elemento
+    document.getElementById("nome1").focus();
+
     //Erros
     $scope.erro = "";
 
     //Inserir nova cuca
     $scope.submit = function(cuca){
 
-        if(cuca == undefined)
+        if($scope.form.preco.$invalid)
         {
-            toastr.error('Campos inválidos', 'Erro');
+            toastr.error('Campo preço inválido', 'Erro');
             return;
         }
-        if(cuca.nome == '' || cuca.nome == undefined)
+        if($scope.form.$invalid)
         {
-            toastr.error('Campos inválidos', 'Erro');
-            return;
-        }
-        if(cuca.descricao == '' || cuca.descricao == undefined)
-        {
-            toastr.error('Campos inválidos', 'Erro');
-            return;
-        }
-        if(cuca.descricao == '' || cuca.descricao == undefined)
-        {
-            toastr.error('Campos inválidos', 'Erro');
+            toastr.error('Campos obrigatórios', 'Erro');
             return;
         }
         if(cuca.preco == '' || cuca.preco == undefined)
         {
-            toastr.error('Campos inválidos', 'Erro');
-            return;
+            cuca.preco = '0';
         }
         cuca.idUsuario = '1';
 

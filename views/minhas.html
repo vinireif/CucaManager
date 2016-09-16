@@ -19,7 +19,7 @@
 		<div class="brown darken-1">
 			<div class="container">
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">Cake's</a>
+					<a href="#/todos" class="brand-logo">Cake's</a>
 					<ul class="right hide-on-med-and-down">
 						<li><a href="#/todos">Todas</a></li>
 						<li class="active"><a href="#/minhas">Minhas Cucas</a></li>
@@ -30,6 +30,9 @@
 			</div>
 		</div>
 	</nav>
+	<div id="progress" class="progress brown lighten-4" ng-show="progress">
+		<div class="indeterminate red lighten-2"></div>
+	</div>
 	<div class="center-align">
 		<a href="#/novaCuca" id="add" class="btn-floating btn-large waves-effect waves-light red lighten-1 hide-on-med-and-down"><i class="material-icons">add</i></a>
 	</div>
@@ -40,23 +43,27 @@
 	<div class="container">
 		<div class="row">
 			<!-- Cards -->
-			<div class="col s12 m6 l4" ng-repeat="cuca in cucas">
-				<div class="card">
+			<div class="col s12 m12 l12" ng-repeat="cuca in cucas">
+				<div class="card horizontal" ng-class="{bordergreen: cuca.ativo == 'S', borderred: cuca.ativo == 'N'}">
 					<div class="card-image no-select">
 						<img src="resources/cakes0.png" height="250px">
 						<span class="card-title white-text">{{cuca.titulo}}</span>
 					</div>
-					<div class="card-content">
-						<p>{{cuca.descricao}}</p>
-						<br>
-						<p>Data: {{cuca.data}}</p>
-						<p>Preço: {{cuca.preco}}</p>
+					<div class="card-stacked">
+						<div class="card-content">
+							<p>{{cuca.descricao}}</p>
+							<br>
+							<p>Data: {{cuca.data}}</p>
+							<p>Preço: {{cuca.preco}}</p>
+						</div>
+						<div class="card-action no-select">
+							<a href="#">EDITAR</a>
+							<a href="" ng-class="{'red-text': cuca.ativo == 'S', 'green-text': cuca.ativo == 'N'}" ng-click="desativar(cuca.id, cuca.ativo == 'S' ? 'N' : 'S', $index)">{{cuca.ativo == 'N' ? 'Ativar' : 'Desativar'}}</a>
+							<!-- <a href="" ng-show="cuca.ativo == 'N'" class="green-text" ng-click="desativar(cuca.id, 'S', $index)">ATIVAR</a> -->
+						</div>
 					</div>
-					<div class="card-action no-select">
-						<a href="#">EDITAR</a>
-					</div>
+
 				</div>
-				<br><br>
 			</div>
 			<!-- /Cards -->
 		</div>

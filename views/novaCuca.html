@@ -4,6 +4,7 @@
 			$(".button-collapse").sideNav({closeOnClick: true});
 			$('.collapsible').collapsible();
 			$('input#nome1, textarea#descricao1').characterCounter();
+			$('.money-mask').mask('000.00', {reverse: true});
 		});
 	</script>
 
@@ -20,13 +21,12 @@
 			<div class="brown darken-1">
 				<div class="container">
 					<div class="nav-wrapper">
-						<a href="#" class="brand-logo">Cake's</a>
+						<a href="#/todos" class="brand-logo">Cake's</a>
 						<ul class="right hide-on-med-and-down">
 							<li><a href="#/todos">Todas</a></li>
 							<li><a href="#/minhas">Minhas Cucas</a></li>
 							<li><a href="#/login">Sair</a></li>
 						</ul>
-
 					</div>
 				</div>
 			</div>
@@ -52,18 +52,18 @@
 							<img src="resources/cakeCadastro.jpg" height="200px">
 							<span class="card-title">Nova Cuca</span>
 						</div>
-						<form id="form">
+						<form id="form" name="form">
 							<div class="card-content">
 
 			                    <!-- Nome -->
 			                    <div class="input-field">
-			                        <input id="nome1" type="text" class="validate" length="20" ng-model="cuca.nome" required>
+			                        <input id="nome1" name="name" type="text" class="validate" length="20" maxlength="20" ng-model="cuca.nome" required>
 			                        <label>Nome</label>
 			                    </div>
 
 			                    <!-- Desc -->
 			                    <div class="input-field">
-			                        <textarea id="descricao1" type="text" class="materialize-textarea validate" length="100" ng-model="cuca.descricao" required></textarea>
+			                        <textarea id="descricao1" type="text" class="materialize-textarea validate" length="200" maxlength="200" ng-model="cuca.descricao" required></textarea>
 			                        <label>Descrição</label>
 			                    </div>
 
@@ -75,7 +75,7 @@
 
 			                    <!-- Preço -->
 			                    <div class="input-field">
-			                        <input type="number" class="validate" min="0" step="0.01" ng-model="cuca.preco">
+			                        <input type="text" name="preco" class="validate money-mask" min="0" max="1000" step="0.01" ng-model="cuca.preco" >
 			                        <label>Preço</label>
 			                    </div>
 

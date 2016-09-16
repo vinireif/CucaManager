@@ -1,3 +1,78 @@
-<div class="container">
+<div ng-controller="loginCtrl">
+	<script>
 
+	    $(document).ready(function(){
+	      $('.tooltipped').tooltip({delay: 50});
+		  $("#email").select();
+		  $("#senha").select();
+		  $("#email").focus();
+		  $("input#email, input#senha").characterCounter();
+	    });
+
+	    function removeTooltip(){
+	      $('.tooltipped').tooltip('remove');
+	    }
+
+	</script>
+
+	<!-- header -->
+	<header class="no-select">
+
+	</header>
+
+	<!-- Main-->
+	<main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l8 offset-l2">
+          <form ng-submit="logar(usuario)">
+
+            <div class="card">
+              <div class="card-image">
+                <img src="resources/images.jpg">
+                <span class="card-title">
+                  <h2>Cake's</h2>
+                </span>
+              </div>
+
+              <div class="card-content">
+                <div class="input-field">
+                  <i class="material-icons prefix">email</i>
+                  <input class="validate" id="email" type="email" ng-model="usuario.email" length="50" maxlength="50" required>
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix" >vpn_key</i>
+                  <input id="senha" type="password" ng-model="usuario.senha" length="50" maxlength="50" required>
+                  <label for="senha">Senha</label>
+                </div>
+              </div>
+
+            <div class="card-action">
+              <button type="submit" class="waves-effect btn red lighten-1">Login</button>
+
+				<div class="right">
+					<a href="#/cadastro" class="waves-effect btn brown darken-1 hide-on-med-and-down">Registrar</a>
+					<a href="#/esqueceuSenha" class="waves-effect btn brown darken-1 hide-on-med-and-down">Esqueci a senha</a>
+				</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-action-btn horizontal hide-on-large-only" style="bottom: 15px; right: 15px;">
+    <a class="btn-floating btn-large red darken-1">
+      <i class="large material-icons">settings</i>
+    </a>
+    <ul>
+      <li><a href="#/cadastro" class="btn-floating red lighten-1 tooltipped" data-position="top" data-delay="1" data-tooltip="Cadastre-se" onclick="removeTooltip()"><i class="material-icons">add</i></a></li>
+      <li><a href="#/esqueceuSenha" class="btn-floating red lighten-1 tooltipped" data-position="top" data-delay="1" data-tooltip="Esqueceu sua senha?" onclick="removeTooltip()"><i class="material-icons">https</i></a></li>
+    </ul>
+  </div>
+
+</main>
+
+	<script type="text/javascript" src="js/datapicker.js"></script>
 </div>

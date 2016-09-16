@@ -25,6 +25,13 @@ app.factory('CucaService', function($http){
         },
         addParticipante: function(cuca){
 
+        },
+        desativar: function(id, ativo){
+            return $http({
+                method: 'post',
+                url: WS_URL+'cuca/desativar.php',
+                data: {'id': id,'ativo': ativo}
+            });
         }
     }
 });
